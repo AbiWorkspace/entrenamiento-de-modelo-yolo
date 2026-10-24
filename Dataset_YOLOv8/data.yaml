@@ -1,0 +1,6 @@
+path: /home/abimael/Escritorio/Entrenamiento de modelo yolo /Dataset_YOLOv8
+train: images/train
+val: images/val
+test: images/test
+nc: 1
+names: {0: disco}

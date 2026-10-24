@@ -1,0 +1,30 @@
+# Hypervariables para detección de disco olímpico con VBT (Fase 4).
+# Ajustadas para maximizar precisión de caja (diámetro px->m) bajo motion blur.
+lr0: 0.001
+lrf: 0.01
+momentum: 0.937
+weight_decay: 0.0005
+warmup_epochs: 4.0
+warmup_momentum: 0.8
+warmup_bias_lr: 0.05
+
+box: 8.5          # Peso elevado en Box Loss (CIoU/DFL): crítico para precisión del diámetro px->m
+cls: 0.5          # Clase única
+dfl: 2.0          # Distribution Focal Loss alto para bordes nítidos bajo motion blur
+
+hsv_h: 0.015
+hsv_s: 0.65
+hsv_v: 0.45
+
+degrees: 7.0      # Inclinación leve de teléfono
+translate: 0.15
+scale: 0.55       # Variación fuerte de distancia cámara-barra
+shear: 2.0
+perspective: 0.0002  # Simula escorzo (cámara no perpendicular al disco)
+
+flipud: 0.0       # PROHIBIDO invertir verticalmente (el suelo siempre está abajo)
+fliplr: 0.5       # Simetría izquierda/derecha válida
+
+mosaic: 1.0       # Excelente para detectar discos a distintas escalas y cerca de los bordes
+mixup: 0.10
+erasing: 0.25     # Oclusión parcial aleatoria en tensores

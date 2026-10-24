@@ -1,0 +1,54 @@
+# Ambientes virtuales
+.venv
+.venv/
+.venv*
+.venv*/
+venv/
+ENV/
+
+# Python cache y compilados
+__pycache__/
+**/__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.ruff_cache/
+.pytest_cache/
+
+# IDEs y editores
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Modelos, pesos y checkpoints (>100MB o binarios pesados)
+*.pt
+*.onnx
+*.torchscript
+*.engine
+best_ncnn_model/
+**/best_ncnn_model/
+runs/
+**/runs/
+weights/
+**/weights/
+
+# Videos de entrenamiento
+*.mp4
+*.mlt
+*.avi
+*.mov
+*.mkv
+
+# Datasets de imágenes y respaldos masivos (>7GB)
+Dataset_YOLOv8/images/
+Dataset_YOLOv8/images_sin_etiquetar/
+*_backup_*
+*_quarantine_*
+*labels_backup*
+preview_test/
+*.cache
+
+# Archivos de log y sistema
+*.log
+.DS_Store

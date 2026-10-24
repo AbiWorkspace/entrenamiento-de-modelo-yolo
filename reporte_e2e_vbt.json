@@ -1,0 +1,25 @@
+{
+  "model": "/home/abimael/Escritorio/Entrenamiento de modelo yolo /Dataset_YOLOv8/best.pt",
+  "total_videos": 2,
+  "fallos": 0,
+  "resultados": [
+    {
+      "video": "20260824_171018.mp4",
+      "ejercicio": "Sentadilla",
+      "segundos": 31.3,
+      "estado": "error",
+      "mensaje": "Fallo VBT.\nCAUSA: YOLO no detectó el disco en ningún momento.\nCÓMO ARREGLARLO: Graba de lado, con el disco COMPLETO dentro del encuadre y sin que el cuerpo lo tape.\nTELEMETRÍA -> Frames: 667 | Tracked: 0 (0%) | Descenso Max: 0.0px",
+      "ruta_video_renderizado": "/tmp/opencode/e2e_vbt/e2e_1_20260824_171018.mp4",
+      "kpi_ok": null
+    },
+    {
+      "video": "20260828_181644.mp4",
+      "ejercicio": "Press de Banca",
+      "segundos": 116.66,
+      "estado": "error",
+      "mensaje": "Fallo VBT.\nCAUSA: YOLO no detectó el disco en ningún momento.\nCÓMO ARREGLARLO: Graba de lado, con el disco COMPLETO dentro del encuadre y sin que el cuerpo lo tape.\nTELEMETRÍA -> Frames: 2003 | Tracked: 0 (0%) | Descenso Max: 0.0px",
+      "ruta_video_renderizado": "/tmp/opencode/e2e_vbt/e2e_2_20260828_181644.mp4",
+      "kpi_ok": null
+    }
+  ]
+}

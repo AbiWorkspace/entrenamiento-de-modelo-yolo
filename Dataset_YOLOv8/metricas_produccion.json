@@ -1,0 +1,20 @@
+{
+    "modelo_base": "/home/abimael/Escritorio/Entrenamiento de modelo yolo /Dataset_YOLOv8/yolo11s.pt",
+    "modelo_ruta": "/home/abimael/Escritorio/Entrenamiento de modelo yolo /Dataset_YOLOv8/runs/detect/train_vbt_rocm_1024/weights/best.pt",
+    "gpu_utilizada": "AMD Radeon RX 7900 XTX",
+    "split_evaluado": "test",
+    "batch_utilizado": 24,
+    "precision": 0.8645,
+    "recall": 0.9758,
+    "f1_score": 0.9168,
+    "auc_roc": 0.992,
+    "pr_auc": 0.942,
+    "mAP50": 0.942,
+    "mAP50_95": 0.4943,
+    "conf_optimo": 0.1802,
+    "tau_low": 0.1201,
+    "tau_high": 0.3363,
+    "muestras_roc_positivas": 85,
+    "muestras_roc_negativas": 938,
+    "gate_5_aprobado": false
+}

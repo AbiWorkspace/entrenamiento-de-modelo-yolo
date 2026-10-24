@@ -1,0 +1,33 @@
+# BoT-SORT adaptado al dominio VBT (un solo disco olímpico, detección débil).
+# Basado en cfg/trackers/botsort.yaml de ultralytics 8.4.104.
+# with_reid: False -> no carga encoder de ReID (ver reid.py:127), así que los
+# campos de ReID (proximity/appearance/model) son inertes y se dejan en default.
+
+tracker_type: botsort
+
+# Asociación de dos etapas. Con conf baja (0.08) llegan candidatas débiles:
+# un high threshold más estricto evita tracks fantasma sobre discos apilados,
+# y el low threshold conserva la recuperación tras oclusión.
+track_high_thresh: 0.5   # primera etapa: solo se asocia con confianza clara
+track_low_thresh: 0.1    # segunda etapa: rescata el disco real débil
+new_track_thresh: 0.4    # alta: no abrir un track nuevo por ruido/segundo disco
+
+# Buffer de frames para mantener vivo un ID perdido. El re-enganche propio del
+# motor (RastreadorDisco) ya cubre oclusiones largas; un buffer moderado
+# suficiente para oclusión por piernas/barrera sin inflar riesgo de ID switch.
+track_buffer: 45
+
+match_thresh: 0.8        # umbral de similitud (IoU/cost); estándar con detector propio
+fuse_score: true         # fusiona score de detección en la asociación
+
+# Cámara estática sobre trípode: cualquier GMC mal estimado desplazaría TODAS
+# las detecciones y corruptaría la posición vertical que la VBT mide. Con
+# cámara fija el movimiento global real es ~0, por lo que 'none' es la opción
+# más conservadora y precisa para este caso.
+gmc_method: none
+
+# ReID desactivado (sin encoder): campos inertes, valores default.
+with_reid: False
+proximity_thresh: 0.5
+appearance_thresh: 0.8
+model: auto

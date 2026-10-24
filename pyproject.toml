@@ -1,0 +1,23 @@
+[project]
+name = "entrenamiento-de-modelo-yolo"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+    "torch==2.5.1+rocm6.2",
+    "torchvision==0.20.1+rocm6.2",
+    "ultralytics>=8.4.104",
+    "albumentations>=2.0.8",
+    "opencv-python-headless>=4.10.0",
+    "psutil>=6.0.0",
+    "pyyaml>=6.0.0",
+    "pyside6>=6.8.0",
+]
+
+[[tool.uv.index]]
+name = "pytorch-rocm"
+url = "https://download.pytorch.org/whl/rocm6.2"
+
+[tool.uv.sources]
+torch = { index = "pytorch-rocm" }
+torchvision = { index = "pytorch-rocm" }
+pytorch-triton-rocm = { index = "pytorch-rocm" }

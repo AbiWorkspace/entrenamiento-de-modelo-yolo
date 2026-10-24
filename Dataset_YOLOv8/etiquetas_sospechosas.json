@@ -1,0 +1,26 @@
+{
+  "total_lineas": 1992,
+  "errores_class_id": 0,
+  "lineas_cortadas": 0,
+  "cajas_sospechosas": 1,
+  "zonas": {
+    "suelo_yc>=0.68": 30,
+    "media_0.38-0.68": 1186,
+    "alta_yc<0.38": 776
+  },
+  "sospechosas": [
+    {
+      "archivo": "_quarantine_legacy/labels/train/frame_000418.txt",
+      "motivos": [
+        "area_norm=0.000146 < 0.0008"
+      ],
+      "valores": {
+        "class_id": 0,
+        "xc": 0.638351,
+        "yc": 0.571774,
+        "w": 0.012903,
+        "h": 0.01129
+      }
+    }
+  ]
+}

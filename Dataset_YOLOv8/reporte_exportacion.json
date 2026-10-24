@@ -1,0 +1,29 @@
+{
+    "best_pt": "/home/abimael/Escritorio/Entrenamiento de modelo yolo /Dataset_YOLOv8/best.pt",
+    "onnx_origen": "/home/abimael/Escritorio/Entrenamiento de modelo yolo /Dataset_YOLOv8/best.onnx",
+    "config": {
+        "imgsz": 1024,
+        "opset": 17,
+        "simplify": true,
+        "half": true,
+        "fps_minimo": 45.0,
+        "warmup_iters": 25,
+        "bench_iters": 200,
+        "conf_umbral_bench": 0.08
+    },
+    "benchmark": {
+        "proveedor": "CPUExecutionProvider",
+        "imgsz": 1024,
+        "fps": 18.13,
+        "ms_por_iteracion": 55.148,
+        "iteraciones": 200,
+        "warmup": 25,
+        "objetivo_fps": 45.0,
+        "objetivo_cumplido": false
+    },
+    "despliegue": {
+        "onnx": "/home/abimael/Escritorio/Entrenamiento de modelo yolo /models/best.onnx",
+        "pt": "/home/abimael/Escritorio/Entrenamiento de modelo yolo /models/best.pt"
+    },
+    "exito": false
+}
